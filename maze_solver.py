@@ -45,7 +45,6 @@ def squared_euclidean(p1, p2):
     return (p1[0]-p2[0])**2 + (p1[1]-p2[1])**2
 start = (400, 984)
 goal = (398, 25)
-# invoke: python mazesolver.py <mazefile> <outputfile>[.jpg|.png|etc.]
 path_img = Image.open(sys.argv[1])
 path_pixels = path_img.load()
 distance = manhattan
