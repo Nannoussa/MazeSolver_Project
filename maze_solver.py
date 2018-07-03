@@ -69,6 +69,7 @@ def manhattan(p1, p2):
     return abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
 def squared_euclidean(p1, p2):
     return (p1[0]-p2[0])**2 + (p1[1]-p2[1])**2
+<<<<<<< HEAD
 # start = (400, 984)
 # goal = (398, 25)
 
@@ -77,6 +78,10 @@ def squared_euclidean(p1, p2):
 start = start_goal_positions().start
 goal = start_goal_positions().goal
 
+=======
+start = (400, 984)
+goal = (398, 25)
+>>>>>>> 58aef9b93241e5e8c2eff1677d5b77ce4afd1f87
 path_img = Image.open(sys.argv[1])
 path_pixels = path_img.load()
 distance = manhattan
@@ -84,5 +89,10 @@ heuristic = manhattan
 path = AStar(start, goal, von_neumann_neighbors, distance, heuristic)
 for position in path:
     x,y = position
+<<<<<<< HEAD
     path_pixels[x,y] = (255,0,0) # the solution color path is red
 path_img.save(sys.argv[2])
+=======
+    path_pixels[x,y] = (255,0,0) # red
+path_img.save(sys.argv[2])
+>>>>>>> 58aef9b93241e5e8c2eff1677d5b77ce4afd1f87
